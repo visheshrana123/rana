@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;      
+  align-items: center;
+  background-color: rgb(92, 81, 168);
+}
+.container{
+    position: relative;
+    height: 600px;
+    width: 600px;
+}
+.sun{
+    position: absolute;
+    height:90px;
+    width: 90px;
+    border-radius: 50%; 
+    top: 50%;
+    left: 50%;
+    background-image: url('https://tse3.mm.bing.net/th/id/OIP.l64CaY8AHwrzQlgV4l3luAHaD5?r=0&cb=thfvnext&w=1103&h=580&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    /* background: radial-gradient(circle, yellow, orange, red);
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 40px 20px rgba(255, 200, 0, 0.8);
+    box-shadow: 0 0 80px 40px rgba(255, 140, 0, 0.6);
+    box-shadow: 0 0 120px 60px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 0 160px 80px rgba(255, 0, 0, 0.3); */
+}
+.orbit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    border: 3px solid black;
+
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+.orbit1{
+    height: 400px;
+    width: 400px;
+}
+.planet1-container{
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    animation: rotate1 6s linear infinite;
+}
+.planet1{
+    height: 50px;
+    width: 50px;
+    top: -15px;
+    left: 30px;
+    border-radius: 50%;
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.VN8zPwFOF-lJc4LJZRxoHQHaHa?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-size: cover;
+    position: absolute;
+    transform: translateX(145px);
+}
+.orbit2{
+    height: 700px;
+    width: 700px;
+}
+.planet2-container{
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    animation: rotate2 12s linear infinite;
+}
+.planet2{
+    height: 70px;
+    width: 70px;
+    top: -75px;
+    left: 60px;
+    border-radius: 50%;
+    background-image: url('https://th.bing.com/th/id/R.8381a70538915a170df0e4d980d684bb?rik=UbsK9adlHv8Iuw&riu=http%3a%2f%2fnssdc.gsfc.nasa.gov%2fimage%2fplanetary%2fmars%2fmarsglobe2.jpg&ehk=LOQSHdDyMfMtMIttohS33aNSnua2uQjMoE7sEp%2bjLP4%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    position: absolute;
+    transform: translateX(250px);
+}
+@keyframes rotate1 {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes rotate2 {
+    100%{
+        transform: rotate(360deg);
+    }
+}
