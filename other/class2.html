@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">this is my first DOM Exercise</h1>
+    <h1 id="heading2">this is my second heading</h1>
+    <p class="paragraph">This is my first paragraph</p>
+    <button id="btn1">dabado</button>
+    <script>
+      let heading = document.getElementById("heading");
+      console.log(heading);
+      let newHeading = document.getElementsByTagName("h1");
+      let paragraph = document.getElementsByClassName("paragraph");
+      let button = document.getElementById("btn1");
+
+      let heading2 = document.querySelector("h1");
+      console.log(heading2);
+      button.onclick = function () {
+        console.log("button is clicked.....");
+      };
+      console.log(newHeading);
+      console.log(newHeading[0]);
+      console.log(newHeading[1]);
+      console.log(newHeading.length);
+      console.log(paragraph[0]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body
+      {
+        height: 100%;
+        width: 100%;
+        border: 5px solid black;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+      form
+      {
+        text-align: center;
+        width: 350px;
+        padding: 25px;
+        border: 1px solid white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px black;
+      }
+      button{
+        background-color: black; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px;
+      }
+    </style>
+  
+</head>
+<body>
+  <form>
+    <h1>Contact</h1>
+    <p>First name</p>
+    <input type="text" name="firstname">
+    <p>Last name</p>
+    <input type="text" name="lastname">
+    <p>Phone</p>
+    <input type="tel" name="phone">
+    <p>Date and time</p>
+    <p>Day</p>
+    <input type="number" min="1" max="31">
+    <p>Month</p>
+    <input type="month">
+    <p>Year</p>
+    <input type="number">
+    <p>Time</p>
+    <input type="time">
+
+    <p>Seating preference</p>
+    <input type="radio" name="seat"> Indoor <br>
+    <input type="radio" name="seat"> Outdoor 
+
+    <p>Additional requests</p>
+    <textarea rows="3" cols="30"></textarea><br>
+
+    <input type="checkbox"> Yes, subscribe me to your newsletter.<br>
+
+    <button>Request booking</button>
+  </form>
+
+</body>
+</html>
+
