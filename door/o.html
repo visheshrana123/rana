@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Diwali — Open Door</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #1a1a40, #000);
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .door-frame {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      perspective: 1000px;
+    }
+
+    .door {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #4b2e05, #7b4b12);
+      border: 4px solid #3b2203;
+      border-radius: 8px;
+      transform-origin: left;
+      transition: transform 1.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .door.open {
+      transform: rotateY(-100deg);
+    }
+
+    .handle {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+      background: gold;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 0 10px gold;
+    }
+
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      color: #ffeb3b;
+      font-size: 2em;
+      text-align: center;
+      opacity: 0;
+      transition: all 1.2s ease-in-out;
+    }
+
+    .show-message {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      text-shadow: 0 0 20px #ffeb3b;
+    }
+  </style>
+</head>
+<body>
+  <div class="door-frame">
+    <div class="door" id="door">
+      <div class="handle"></div>
+    </div>
+    <div class="message" id="message"> Happy Diwali To Your Family </div>
+  </div>
+
+  <script>
+    const door = document.getElementById('door');
+    const message = document.getElementById('message');
+
+    door.addEventListener('click', () => {
+      door.classList.toggle('open');
+      if (door.classList.contains('open')) {
+        message.classList.add('show-message');
+      } else {
+        message.classList.remove('show-message');
+      }
+    });
+  </script>
+</body>
+</html>
+
